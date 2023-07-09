@@ -8,7 +8,7 @@ import {useState} from "react";
 function App() {
     const [userId, setUserId] = useState(null)
     return (
-        <div className="Appp">
+        <div className="App">
 
             <Posts/>
             <Flights/>
