@@ -11,6 +11,7 @@ function App() {
         <div className="App">
 
             <Posts/>
+
             <Flights/>
             <Users setUserId = {setUserId}/>
 
