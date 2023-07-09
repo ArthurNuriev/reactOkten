@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 
 const UserPost = ({post}) => {
     const {userId, id, tittle, body} = post;
