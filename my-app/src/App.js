@@ -1,24 +1,25 @@
+import logo from './logo.svg';
 import './App.css';
-import Posts from "./components/Posts/Posts";
-import {Flights} from "./components/ Flights/Flights";
-import {Users} from "./components/Users/Users";
-import {UserPosts} from "./components/Users/UserPosts/UserPosts";
-import {useState} from "react";
 
 function App() {
-    const [userId, setUserId] = useState(null)
-    return (
-        <div className="App">
-
-            <Posts/>
-
-            <Flights/>
-            <Users setUserId = {setUserId}/>
-
-            {userId && <UserPosts userId = {userId}/>}
-
-        </div>
-    );
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
