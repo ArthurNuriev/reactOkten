@@ -4,13 +4,11 @@ import {PostComponent} from "./components/PostComponent/PostComponent";
 import {CreateCar} from "./components/CarComponent/CreateCar";
 import {DeleteCar} from "./components/CarComponent/DeleteCar";
 import {UpdateCar} from "./components/CarComponent/UpdateCar";
-
-
-
-
+import {Cars} from "./components/CarComponent/Cars";
 function App() {
 
     return (
+        <div>
         <div className="App">
             <UserComponent/>
             <PostComponent/>
@@ -18,7 +16,8 @@ function App() {
             <DeleteCar/>
             <UpdateCar/>
 
-
+        </div>
+            <Cars/>
         </div>
     );
 }
