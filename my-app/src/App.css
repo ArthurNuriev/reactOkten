@@ -27,9 +27,18 @@
     margin: 10px;
     background-color: #e2f1ea;
 }
-.car{
+.cars{
     border: 1px solid black;
     margin: 30px;
-    width: 500px;
+    width: 200px;
+}
+.cars p{
+    margin: 0;
+}
+.car{
+    margin: 20px;
+}
+.container{
+    display: flex;
 }
 

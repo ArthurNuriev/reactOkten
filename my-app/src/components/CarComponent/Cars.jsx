@@ -3,22 +3,22 @@ import {Car} from "./Car";
 
 const Cars = () => {
     const [cars, setCars] = useState([]);
+    const [flag, setFlag] = useState(false);
 
     useEffect(() => {
         fetch('http://owu.linkpc.net/carsAPI/v1/cars')
             .then(value => value.json())
-            .then(cars => handelClick(cars))
-    },[])
+            .then(cars => setCars(cars))
 
-    const handelClick = (cars) => {
-        setCars(cars)
-    }
+    },[flag])
+
+    console.log('rend')
 
     return (
-        <div className={"car"}>
-            <button onClick={handelClick}>get cars</button>
+        <div className={"cars"}>
+            <button onClick={()=> setFlag(prevState => !prevState)}>get cars</button>
 
-           {cars.map((car, id)=>{
+           {flag && cars.map((car, id)=>{
                 return(
                     <Car key={id} car={car}/>
                 )
