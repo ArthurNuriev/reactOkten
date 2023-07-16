@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Auto} from "../Auto/Auto";
 
-const Autos = ({onSave}) => {
+const Autos = ({onSave, setOnSave, setCarForUpdate}) => {
 
     const [autos, setAutos] = useState([]);
 
@@ -13,13 +13,11 @@ const Autos = ({onSave}) => {
 
     let sort = autos.sort((a, b) => b.id - a.id);
 
-    console.log('ff')
-
     return (
         <div>
             {sort.map((value,id) => {
                 return(
-                    <Auto key={id} autos={value}/>
+                    <Auto key={id} auto={value} setOnSave={setOnSave} setCarForUpdate={setCarForUpdate}/>
                 )
             })}
         </div>
