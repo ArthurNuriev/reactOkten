@@ -5,11 +5,12 @@ import {Cars} from "./Cars/Cars";
 const CarsComponents = () => {
 
     const [checkUpdateForm ,setCheckUpdateForm] = useState(null);
+    const [carForUpdate, setCarForUpdate] = useState(null)
 
     return (
         <div className={"wrapper"}>
-            <CarsForm setCheckUpdateForm={setCheckUpdateForm}/>
-            <Cars checkUpdateForm={checkUpdateForm} setCheckUpdateForm={setCheckUpdateForm}/>
+            <CarsForm setCheckUpdateForm={setCheckUpdateForm} carForUpdate={carForUpdate}/>
+            <Cars checkUpdateForm={checkUpdateForm} setCheckUpdateForm={setCheckUpdateForm} setCarForUpdate={setCarForUpdate}/>
         </div>
     );
 };

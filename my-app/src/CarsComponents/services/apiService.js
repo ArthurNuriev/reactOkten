@@ -30,10 +30,11 @@ export const CarApiService ={
             })
     },
 
-    update: (id,setCheckUpdateForm,reset, car) => {
+    update: (id,setCheckUpdateForm,reset, car, setValue) => {
         instance.put(`${endPoint.cars}/${id}`, car)
             .then(() => {
                 setCheckUpdateForm(prev => !prev)
+                setValue(car)
                 reset()
             })
     }

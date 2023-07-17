@@ -1,7 +1,7 @@
 import React from 'react';
 import {CarApiService} from "../../services/apiService";
 
-const Car = ({car, setCheckUpdateForm}) => {
+const Car = ({car, setCheckUpdateForm,setCarForUpdate}) => {
 
     const {id, brand, price, year} = car;
 
@@ -16,7 +16,7 @@ const Car = ({car, setCheckUpdateForm}) => {
             <p>price: {price}</p>
             <p>year: {year}</p>
             <button onClick={deleteCar}>delete</button>
-            &nbsp;<button>update</button>
+            &nbsp;<button onClick={()=>setCarForUpdate(car)}>update</button>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Car} from "./Car/Car";
 import {CarApiService} from "../services/apiService";
 
-const Cars = ({checkUpdateForm, setCheckUpdateForm}) => {
+const Cars = ({checkUpdateForm, setCheckUpdateForm, setCarForUpdate}) => {
 
     const [cars, setCars] = useState([]);
 
@@ -16,7 +16,7 @@ const Cars = ({checkUpdateForm, setCheckUpdateForm}) => {
         <div>
             {sort.map((car, index) => {
                 return(
-                    <Car key={index} car={car} setCheckUpdateForm={setCheckUpdateForm}/>
+                    <Car key={index} car={car} setCheckUpdateForm={setCheckUpdateForm} setCarForUpdate={setCarForUpdate}/>
                 )
             })}
         </div>
