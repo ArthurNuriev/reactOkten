@@ -1,26 +1,40 @@
 import Joi from "joi";
 
 const carValidator = Joi.object({
-    brand: Joi.string()
-        .regex(/^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/).required()
-        .messages({'string.pattern.base': 'буквеный формат от 1-20 ',
-        'string.required': 'обязательно для заполнения '}),
+    brand: Joi
+        .string()
+        .regex(/^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/)
+        .required()
+        .messages({
+            'string.pattern.base': 'letter format from 1-20 ',
+            'string.required': 'required to fill ',
+            'string.empty': 'required to fill ',
+
+        }),
     price: Joi
         .number()
-        .ruleset
         .min(0)
         .max(1000000)
-        .messages({'number.base': "только число "})
-        .rule({message: 'от 0-100_000 '})
-        .required(),
+        .required()
+        .messages({
+            'number.base': "only number ",
+            'number.min':'min 0 ',
+            'number.max':'max 100_000 ',
+            'number.required':'required to fill '
+        }),
     year: Joi
         .number()
-        .ruleset
         .min(1990)
         .max(new Date().getFullYear())
-        .messages({'number.base': "только число "})
-        .rule({message: 'от 1990г - до текущего год'})
         .required()
+        .messages({
+            'number.base': "only number ",
+            'number.min':'min - 1990 ',
+            'number.max':'max - current date ',
+            'number.required':'required to fill '
+        })
+
+
 })
 
 export {carValidator}

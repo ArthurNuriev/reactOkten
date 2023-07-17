@@ -2,6 +2,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../CarValidators/carValidators";
+import {CarApiService} from "../services/apiService";
 
 const CarsForm = ({setCheckUpdateForm}) => {
 
@@ -16,21 +17,19 @@ const CarsForm = ({setCheckUpdateForm}) => {
         resolver: joiResolver(carValidator)
     })
 
-    const save = (car) => {
-        fetch('http://owu.linkpc.net/carsAPI/v1/cars', {
-            method: 'post',
-            headers: {'content-type': 'application/json'},
-            body: JSON.stringify(car)
-        })
-            .then(() => {
-                setCheckUpdateForm(prev => !prev)
-                reset()
-            })
+    const saveCar = (car) => {
+        CarApiService.save(car,setCheckUpdateForm,reset);
     }
+
+    const updateCar = (car) => {
+        // CarApiService.save(car,setCheckUpdateForm,reset);
+    }
+
+
 
     return (
         <div>
-            <form onSubmit={handleSubmit(save)}>
+            <form onSubmit={handleSubmit(saveCar)}>
                 <label>brand <input type={'text'} {...register("brand")}/> </label>
                 {errors.brand && <span>{errors.brand.message}</span>}
                 <label>price <input type={'text'} {...register("price")}/> </label>
