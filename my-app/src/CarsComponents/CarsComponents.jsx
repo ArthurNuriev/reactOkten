@@ -9,7 +9,7 @@ const CarsComponents = () => {
 
     return (
         <div className={"wrapper"}>
-            <CarsForm setCheckUpdateForm={setCheckUpdateForm} carForUpdate={carForUpdate}/>
+            <CarsForm setCheckUpdateForm={setCheckUpdateForm} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
             <Cars checkUpdateForm={checkUpdateForm} setCheckUpdateForm={setCheckUpdateForm} setCarForUpdate={setCarForUpdate}/>
         </div>
     );
