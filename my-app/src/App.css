@@ -1,31 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 .App{
-    margin: 20px;
+    margin: 0;
     display: flex;
+    justify-content: center;
+    color: #518153;
+    background-color: #313335;
+    font-family: 'Roboto Mono', monospace;
+
 }
-.posts{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #acdab0;
+input{
+    background-color: #518153;
 }
 
-.user{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #d6d9d9;
+.wrapper{
+    background-color: #2b2b2b;
+    padding: 20px;
 }
-.user p{
+
+.car p{
     margin: 0;
 }
-.subChild{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #e2f1ea;
+.car{
+    border-bottom: solid 1px #9aaf66;
+    padding: 10px 0 10px;;
+}
+form{
+    padding: 20px 0 40px;
+    border-bottom: solid 1px #9aaf66;
+}
+button{
+    background-color: #518153;
+}
+span{
+    color: #c94343;
+    font-size: 12px;
 }
 .cars{
     border: 1px solid black;
