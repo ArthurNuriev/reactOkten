@@ -39,3 +39,18 @@ export const CarApiService ={
             })
     }
 }
+
+export const UserApiService = {
+    createUser: (user) =>{
+        axios.post('https://jsonplaceholder.typicode.com/users',user)
+            .then(value => console.log(value.data))
+    },
+
+    createComment: (data)=>{
+        console.log(data.postId)
+        axios.post(`https://jsonplaceholder.typicode.com/posts/${data.postId}/comments`,data)
+            .then(value => console.log(value.data))
+    }
+}
+
+

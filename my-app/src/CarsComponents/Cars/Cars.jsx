@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Car} from "./Car/Car";
-import {CarApiService} from "../services/apiService";
+import {CarApiService} from "../../services/apiService";
 
 const Cars = ({checkUpdateForm, setCheckUpdateForm, setCarForUpdate}) => {
 

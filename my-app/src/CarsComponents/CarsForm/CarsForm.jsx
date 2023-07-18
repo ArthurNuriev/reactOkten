@@ -2,17 +2,11 @@ import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../CarValidators/carValidators";
-import {CarApiService} from "../services/apiService";
+import {CarApiService} from "../../services/apiService";
 
 const CarsForm = ({setCheckUpdateForm, carForUpdate,setCarForUpdate}) => {
 
-    useEffect(() => {
-        if(carForUpdate){
-            setValue('brand',carForUpdate.brand)
-            setValue('price',carForUpdate.price)
-            setValue('year',carForUpdate.year)
-        }
-    },[carForUpdate])
+
 
     const {
         register
@@ -25,6 +19,14 @@ const CarsForm = ({setCheckUpdateForm, carForUpdate,setCarForUpdate}) => {
         resolver: joiResolver(carValidator)
     })
 
+    useEffect(() => {
+        if(carForUpdate){
+            setValue('brand',carForUpdate.brand)
+            setValue('price',carForUpdate.price)
+            setValue('year',carForUpdate.year)
+        }
+    },[carForUpdate])
+
     const saveCar = (car) => {
         CarApiService.save(car,setCheckUpdateForm,reset);
     }
@@ -36,6 +38,7 @@ const CarsForm = ({setCheckUpdateForm, carForUpdate,setCarForUpdate}) => {
     return (
         <div>
             <form onSubmit={handleSubmit(carForUpdate ? updateCar: saveCar)}>
+                <p>CAR:</p>
                 <label>brand <input type={'text'} {...register("brand")}/> </label>
                 {errors.brand && <span>{errors.brand.message}</span>}
                 <label>price <input type={'text'} {...register("price")}/> </label>
