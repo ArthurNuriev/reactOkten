@@ -37,4 +37,18 @@ span{
     color: #c94343;
     font-size: 12px;
 }
+.cars{
+    border: 1px solid black;
+    margin: 30px;
+    width: 200px;
+}
+.cars p{
+    margin: 0;
+}
+.car{
+    margin: 20px;
+}
+.container{
+    display: flex;
+}
 
