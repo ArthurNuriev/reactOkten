@@ -1,30 +1,5 @@
 .App{
     margin: 20px;
-    display: flex;
-}
-.posts{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #acdab0;
 }
 
-.user{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #d6d9d9;
-}
-.user p{
-    margin: 0;
-}
-.subChild{
-    border: 1px solid black;
-    padding: 10px;
-    width: 250px;
-    margin: 10px;
-    background-color: #e2f1ea;
-}
 
