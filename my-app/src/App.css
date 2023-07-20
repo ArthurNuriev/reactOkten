@@ -1,5 +1,9 @@
 .App{
     margin: 20px;
 }
-
-
+p{
+    margin: 0;
+}
+.todo{
+    margin: 0 20px;
+}

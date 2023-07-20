@@ -1,6 +1,9 @@
 import {createBrowserRouter} from "react-router-dom";
 import {AppLayout} from "../pages/AppLayout/AppLayout";
 import {AppRouters} from "./AppRouters";
+import {Todos} from "../components/Todos/Todos";
+import {Albums} from "../components/Albums/Albums";
+import {Comments} from "../components/Comments/Comments";
 
 export const router = createBrowserRouter([
     {
@@ -13,15 +16,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: AppRouters.TODOS,
-                element: <h2>todos</h2>
+                element: <Todos/>
             },
             {
                 path: AppRouters.ALBUMS,
-                element: <h2>albums</h2>
+                element: <Albums/>
             },
             {
                 path: AppRouters.COMMENTS,
-                element: <h2>comments</h2>
+                element: <Comments/>
             }
         ]
     }

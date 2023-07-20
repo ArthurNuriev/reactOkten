@@ -1,18 +1,17 @@
 import React from 'react';
 
-const Todo = ({todo}) => {
+const Album = ({album}) => {
 
-    const {userId, id, title, completed} = todo;
+    const {userId, id, title} = album;
 
     return (
         <div className={"todo"}>
-            <p>completed: {userId}</p>
+            <p>userId: {userId}</p>
             <p>id: {id}</p>
             <p>title: {title}</p>
-            <p>completed: {completed.toString()}</p>
             <hr/>
         </div>
     );
 };
 
-export {Todo};
+export {Album};
