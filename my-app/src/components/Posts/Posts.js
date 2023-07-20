@@ -6,22 +6,18 @@ import {Post} from "./Post/Post";
 const Posts = () => {
 
     const path = useParams();
-    const [post, setPost] = useState([]);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
         postService.getAll(path.id).then(value => value.data).then(value => setPost(value))
-    },[])
+    },[path.id])
     console.log('*************')
 
 
     return (
         <div>
-            <Outlet/>
-            {post.map((value, index) => {
-                return(
-                    <Post key={index} post={post}/>
-                )
-            })}
+            {post.title}
+            {console.log(post)}
 
         </div>
     );
