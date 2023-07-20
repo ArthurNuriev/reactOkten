@@ -1,0 +1,14 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aecbcc;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    border: 1px solid black;
+
+}
+h3{
+    margin: 0;
+}
