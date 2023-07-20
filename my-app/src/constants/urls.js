@@ -3,6 +3,7 @@ const baseURL = 'https://jsonplaceholder.typicode.com/';
 const todos = '/todos';
 const albums = '/albums';
 const comments = '/comments';
+const posts = '/posts';
 
 const urls = {
     todos: {
@@ -16,6 +17,10 @@ const urls = {
     comments: {
         base: comments,
         byId: (id)=> `${comments}/${id}`
+    },
+    posts: {
+        base: posts,
+        byId: (id)=> `${posts}/${id}`
     },
 
 }
