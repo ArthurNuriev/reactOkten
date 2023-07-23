@@ -3,12 +3,13 @@ import {createBrowserRouter} from 'react-router-dom'
 import {MainLayout} from "./layouts/MainLayout/MainLayout";
 import {AlbumsPage, CommentsPage, NotFoundPage, PostPage, TodosPage} from "./pages";
 import {LoginLayout} from "./layouts/LoginLayout/LoginLayout";
+import {PublicRoute} from "./pages/HOC/PublicRoute";
 
 
 export const router = createBrowserRouter([
     {
-        path: '',
-        element: <MainLayout/>,
+        path: 'main',
+        element: <PublicRoute Component={MainLayout}/>,
         children: [
             {
                 path: 'todos',
