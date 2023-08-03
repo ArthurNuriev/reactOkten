@@ -1,5 +1,12 @@
 
 .App{
     margin: 20px;
+    display: flex;
+}
+.memo{
+    padding: 10px;
+    margin-left: 20px;
+    border: black solid 1px;
+    width: 200px;
 }
 
